@@ -1,0 +1,319 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-20 21:36+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\Student\settings.py:146
+msgid "简体中文"
+msgstr "簡体字中国語"
+
+#: .\Student\settings.py:147
+msgid "日本語"
+msgstr "日本語"
+
+#: .\app01\models.py:8
+msgid "班主任姓名"
+msgstr "担任者"
+
+#: .\app01\models.py:9 .\app01\templates\index.html:35
+#: .\app01\templates\teachers_add.html:48
+msgid "年龄"
+msgstr "年齢"
+
+#: .\app01\models.py:14 .\app01\models.py:28 .\app01\templates\index.html:34
+#: .\app01\templates\student_content.html:35
+#: .\app01\templates\student_list.html:17
+#: .\app01\templates\teachers_add.html:49
+msgid "性别"
+msgstr "性别"
+
+#: .\app01\models.py:15
+msgid "号码"
+msgstr "番号"
+
+#: .\app01\models.py:23
+msgid "学生姓名"
+msgstr "生徒氏名"
+
+#: .\app01\models.py:29 .\app01\templates\student_content.html:36
+#: .\app01\templates\student_list.html:18
+msgid "学号"
+msgstr "学籍番号"
+
+#: .\app01\models.py:30 .\app01\templates\index.html:33
+#: .\app01\templates\student_content.html:37
+#: .\app01\templates\student_list.html:19
+msgid "班主任"
+msgstr "担任者"
+
+#: .\app01\models.py:34 .\app01\templates\admin_manager.html:17
+msgid "管理员姓名"
+msgstr "管理者氏名"
+
+#: .\app01\models.py:35 .\app01\templates\admin_manager.html:18
+msgid "密码"
+msgstr "パスワード"
+
+#: .\app01\templates\admin_error.html:9
+msgid "管理员信息错误"
+msgstr "管理者の情報に誤りがあります"
+
+#: .\app01\templates\admin_error.html:9
+msgid "请检查数据格式后尝试重新提交"
+msgstr "データ形式を確認の上、再度提出してください"
+
+#: .\app01\templates\admin_error.html:12
+msgid "请检查"
+msgstr "ご確認ください"
+
+#: .\app01\templates\admin_error.html:30
+msgid "管理员账户密码必须大于六位，且用户名是必须的"
+msgstr "管理者アカウントのパスワードは6桁以上で入力してください。ユーザー名は必須です"
+
+#: .\app01\templates\admin_manager.html:8 .\app01\templates\layout.html:87
+msgid "管理员信息"
+msgstr "管理者の情報"
+
+#: .\app01\templates\admin_manager.html:8
+msgid "在这里你可以浏览或者修改管理员信息"
+msgstr "管理者の情報を閲覧・編集できます"
+
+#: .\app01\templates\admin_manager.html:19
+#: .\app01\templates\teachers_add.html:63
+msgid "删除"
+msgstr "削除"
+
+#: .\app01\templates\admin_manager.html:54
+msgid "请添加管理员信息"
+msgstr "管理者情報を追加してください"
+
+#: .\app01\templates\admin_manager.html:67
+#: .\app01\templates\student_content.html:113
+msgid "关 闭"
+msgstr "閉じる"
+
+#: .\app01\templates\admin_manager.html:68
+#: .\app01\templates\student_content.html:114
+msgid "保存信息"
+msgstr "保 存"
+
+#: .\app01\templates\index.html:12 .\app01\templates\layout.html:8
+#: .\app01\templates\layout.html:49
+msgid "学生管理系统"
+msgstr "生徒管理システム"
+
+#: .\app01\templates\index.html:15
+msgid "在这里您可以添加学生的信息，关联学生和班主任，添加班主任教师信息。"
+msgstr "ここで生徒の情報を登録したり、生徒と担任教師を紐づけたり、担任者の情報を追加できます"
+
+
+#: .\app01\templates\index.html:25
+msgid "各班级报道情况,已报到"
+msgstr "各クラスの登校状況：既に登校済み"
+
+#: .\app01\templates\index.html:36
+msgid "联系方式"
+msgstr "連絡先"
+
+#: .\app01\templates\index.html:37
+msgid "学生人数"
+msgstr "生徒数"
+
+#: .\app01\templates\index.html:46
+msgid "岁"
+msgstr "歳"
+
+#: .\app01\templates\index.html:70
+msgid "班级人数对比"
+msgstr "クラス数の比較"
+
+#: .\app01\templates\index.html:76
+msgid "老师"
+msgstr "先生"
+
+#: .\app01\templates\layout.html:55
+msgid "添加学生"
+msgstr "生徒を追加する"
+
+#: .\app01\templates\layout.html:56
+msgid "添加教师"
+msgstr "教員を登録する"
+
+#: .\app01\templates\layout.html:76
+msgid "Switch"
+msgstr ""
+
+#: .\app01\templates\layout.html:90
+msgid "学生总表"
+msgstr "生徒台帳"
+
+#: .\app01\templates\layout.html:92
+msgid "注 销"
+msgstr "ログアウト"
+
+#: .\app01\templates\login.html:8 .\app01\templates\login.html:504
+msgid "登 录"
+msgstr "ログイン"
+
+#: .\app01\templates\login.html:476
+msgid "欢 迎!"
+msgstr "ようこそ"
+
+#: .\app01\templates\login.html:477
+msgid "请登录您的账户"
+msgstr "アカウントにログイン"
+
+#: .\app01\templates\login.html:485
+msgid "用 户 名"
+msgstr "ユーザー名"
+
+#: .\app01\templates\login.html:492
+msgid "密 码"
+msgstr "パスワード"
+
+#: .\app01\templates\login.html:500
+msgid "记住我?"
+msgstr "私を覚えておく"
+
+#: .\app01\templates\student_add.html:11
+msgid "您输入了错误的学生信息"
+msgstr "生徒情報に誤りがあります"
+
+#: .\app01\templates\student_add.html:11
+msgid "请检查输入的数据是否正确，再次进行提交"
+msgstr "入力内容を確認の上、再度提出してください"
+
+#: .\app01\templates\student_add.html:16
+msgid "请在下列表中添加学生信息"
+msgstr "下記の表に生徒情報を入力してください"
+
+#: .\app01\templates\student_add.html:30
+#: .\app01\templates\student_edit.html:20
+#: .\app01\templates\teachers_add.html:28
+msgid "添 加"
+msgstr "追 加"
+
+#: .\app01\templates\student_add.html:37
+msgid "学生姓名最低不得少于一个字，学号格式为 S + 7 位数字"
+msgstr "学生の名前は最低1文字以上でなければならず、学校番号の形式はS + 7桁の数字である"
+
+#: .\app01\templates\student_content.html:9
+#: .\app01\templates\student_list.html:8
+msgid "学生信息展示"
+msgstr "生徒情報表示画面"
+
+#: .\app01\templates\student_content.html:9
+msgid "在这里你看到已经添加的学生信息，目前已报到"
+msgstr "ここに登録済みの生徒情報が表示されています，登録人数"
+
+#: .\app01\templates\student_content.html:15
+msgid "添加学生信息"
+msgstr "新たな生徒情報を登録する"
+
+#: .\app01\templates\student_content.html:20
+msgid "请 输 入 学 号"
+msgstr "学籍番号を入力してください"
+
+#: .\app01\templates\student_content.html:34
+#: .\app01\templates\student_list.html:16
+msgid "姓名"
+msgstr "氏名"
+
+#: .\app01\templates\student_content.html:38
+#: .\app01\templates\student_list.html:20
+msgid "删除|编辑"
+msgstr "削除|編集"
+
+#: .\app01\templates\student_content.html:79
+msgid "当前第"
+msgstr "現在の"
+
+#: .\app01\templates\student_content.html:79
+msgid "页 总共"
+msgstr "ページ目,全部で"
+
+#: .\app01\templates\student_content.html:79
+msgid "页"
+msgstr "ページ"
+
+#: .\app01\templates\student_content.html:101
+msgid "请添加学生信息"
+msgstr "新規生徒情報を登録してください"
+
+#: .\app01\templates\student_edit.html:8
+msgid "学生信息修改"
+msgstr "生徒情報の変更"
+
+#: .\app01\templates\student_edit.html:8
+msgid "可以在这里修改学生信息"
+msgstr "ここから生徒情報を編集できます"
+
+#: .\app01\templates\student_list.html:8
+msgid "这里你将看到全部学生信息，搜索请移动至学生添加界面"
+msgstr "検索する場合は生徒追加画面へお進みください"
+
+#: .\app01\templates\student_list.html:46
+msgid "学生信息将会实时动态进行更新"
+msgstr "生徒情報はリアルタイムで自動更新されます"
+
+#: .\app01\templates\teachers_add.html:8
+msgid "教师信息展示"
+msgstr "教員情報画面示す"
+
+#: .\app01\templates\teachers_add.html:8
+msgid "在这里您可以添加并查看教师信息"
+msgstr "ここから教員情報を登録・参照できます"
+
+#: .\app01\templates\teachers_add.html:13
+msgid "请添加教师信息"
+msgstr "新しい教員情報を入力してください"
+
+#: .\app01\templates\teachers_add.html:38
+msgid "教 师 列 表"
+msgstr "教員マスタ一覧"
+
+#: .\app01\templates\teachers_add.html:46
+msgid "教师姓名"
+msgstr "教員氏名"
+
+#: .\app01\templates\teachers_add.html:50
+msgid "电话号码"
+msgstr "電話番号"
+
+#: .\app01\templates\teachers_add.html:51
+msgid "操作"
+msgstr "操作"
+
+#: .\app01\views.py:35 .\app01\views.py:44 .\app01\views.py:95
+msgid "格式错误"
+msgstr "形式エラー"
+
+#: .\app01\views.py:37
+msgid "号码已经存在"
+msgstr "該番号は既に存在します"
+
+#: .\app01\views.py:46
+msgid "班主任已存在"
+msgstr "担任者情報は既に登録されています"
+
+#: .\app01\views.py:104
+msgid "学号已经存在"
+msgstr "学籍番号は既に登録されています"
+
+#: .\app01\views.py:196
+msgid "密码过短，请重新输入"
+msgstr "パスワードが短すぎます"

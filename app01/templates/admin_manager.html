@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+                {%trans '管理员信息' %} <small>{% trans '在这里你可以浏览或者修改管理员信息' %}</small></h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>{% trans '管理员姓名' %}</th>
+                        <th>{% trans '密码' %}</th>
+                        <th>{% trans '删除' %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for foo in form %}
+                        <tr>
+                            <th {{ foo.id }}>1</th>
+                            <td>{{ foo.username }}</td>
+                            <td>{{ foo.password }}</td>
+                            <td>
+                                <a class="btn btn-danger btn-xs" id="delBtn" href="/index/{{ foo.id }}/admin_del/"
+                                   onclick="show_alert()">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </a>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-lg-6 row">
+            <a href="#" class=" btn btn-success btn-xl " id="btnAdd" role="button">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                添加管理员信息</a>
+        </div>
+    </div>
+
+{#    弹出框#}
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{% trans '请添加管理员信息' %}</h4>
+                    </div>
+
+                    <div  class="">
+                        <form method="post" action="/index/admin_add/" novalidate>
+                            {% csrf_token %}
+                            {% for foo in content_form %}
+                                <div class="col-xs-6">
+                                    <span style="color: red">{{ foo.errors.0 }}</span>
+                                    {{ foo.label }}: {{ foo }}
+                                </div>
+                            {% endfor %}
+                            <div class="modal-footer">
+                                <button style="margin-top: 20px" type="button" class="btn btn-default" data-dismiss="modal">{% trans '关 闭' %}</button>
+                                <button style="margin-top: 20px" type="submit" class="btn btn-primary">{% trans '保存信息' %}</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block JS %}
+    <script type="text/javascript">
+        function show_alert() {
+            alert("success!");
+        }
+    </script>
+     <script type="text/javascript">
+        $(function () {
+            AddEvent();
+        })
+
+        function AddEvent() {
+            //找到id=btnAdd的元素，给他绑定一个点击事件
+            $('#btnAdd').click(function () {
+                //点击后找到id=myModal的元素，将其展示出来
+                $('#myModal').modal('show')
+            });
+        }
+    </script>
+{% endblock %}
+

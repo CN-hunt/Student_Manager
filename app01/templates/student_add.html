@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% block CSS %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                {% trans '您输入了错误的学生信息' %} <small>{% trans '请检查输入的数据是否正确，再次进行提交' %}</small></h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #DCDCDC">
+                <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                {% trans '请在下列表中添加学生信息' %}</div>
+            <div class="panel-body">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {% for foo in form %}
+                        <div class="col-xs-6">
+                            <span style="color: red">{{ foo.errors.0 }}</span>
+                            {{ foo.label }}: {{ foo }}
+                        </div>
+                    {% endfor %}
+                    <div class="form-group-lg">
+                        <div class=" col-sm-10">
+                            <button type="submit" class="btn btn-info " style="margin-top: 10px">
+                                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                {% trans '添 加' %}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="alert alert-danger" role="alert">
+            {% trans '学生姓名最低不得少于一个字，学号格式为 S + 7 位数字' %}
+        </div>
+    </div>
+{% endblock %}

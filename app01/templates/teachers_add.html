@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                {% trans '教师信息展示' %} <small>{% trans '在这里您可以添加并查看教师信息' %}</small></h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                {% trans '请添加教师信息' %}
+            </div>
+            <div class="panel-body">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {% for foo in form %}
+                        <div class="col-xs-6">
+                            <span style="color: red">{{ foo.errors.0 }}</span>
+                            {{ foo.label }}: {{ foo }}
+                        </div>
+                    {% endfor %}
+                    <div class="form-group-lg">
+                        <div class=" col-sm-10">
+                            <button type="submit" class="btn btn-info " style="margin-top: 10px">
+                                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                {% trans '添 加' %}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                {% trans '教 师 列 表' %}
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            {% trans '教师姓名' %}
+                        </th>
+                        <th>{% trans '年龄' %}</th>
+                        <th>{% trans '性别' %}</th>
+                        <th>{% trans '电话号码' %}</th>
+                        <th>{% trans '操作' %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in data %}
+                        <tr>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.age }}</td>
+                            <td>{{ item.get_gender_display }}</td>
+                            <td>{{ item.number }}</td>
+                            <td>
+                                <a class="btn btn-danger btn-xs" id="delBtn" href="/index/{{ item.id }}/teacherdel/">
+                                    {% trans '删除' %}
+                                    <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                                </a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block JS %}
+{% endblock %}

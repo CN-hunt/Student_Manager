@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% block content %}
+
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <span style="" class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                {% trans '管理员信息错误' %} <small>{% trans '请检查数据格式后尝试重新提交' %}</small></h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">{% trans '请检查' %}</div>
+            <div class="panel-body">
+                <form method="post" action="/index/admin_error/" novalidate>
+                {% csrf_token %}
+                {% for foo in form %}
+                    <div class="col-xs-6">
+                        <span style="color: red">{{ foo.errors.0 }}</span>
+                        {{ foo.label }}: {{ foo }}
+                    </div>
+                {% endfor %}
+                <div class="" style="float: right;margin-right: 15px">
+                    </button>
+                    <button style="margin-top: 20px" type="submit" class="btn btn-primary">保存信息</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="alert alert-danger" role="alert">
+            {% trans '管理员账户密码必须大于六位，且用户名是必须的' %}
+        </div>
+
+    </div>
+
+{% endblock %}

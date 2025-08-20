@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <div class="container-fluid clearfix">
+
+        <div class="jumbotron col-lg-6" style="box-shadow: 10px 10px 15px #EEDD82;">
+            <h1>
+                {#<span class="glyphicon glyphicon-th-large" aria-hidden="true" style="color: #FFC0CB"></span>#}
+                <img style="width: 65px;height: 65px;float: left;margin-right: 20px;"
+                     src="{% static '/img/button.png' %}" alt="">
+                {% trans '学生管理系统' %}</h1>
+
+            <p>
+                {% trans '在这里您可以添加学生的信息，关联学生和班主任，添加班主任教师信息。' %}</p>
+        </div>
+
+        {#        班级统计#}
+        <div class="col-lg-6" >
+            <!-- 班级统计表 -->
+            <div class="panel panel-default" style="box-shadow: 10px 10px 15px #b2dba1;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                        {% trans '各班级报道情况,已报到' %} {{ students.count }} 人</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>{% trans '班主任' %}</th>
+                                <th>{% trans '性别' %}</th>
+                                <th>{% trans '年龄' %}</th>
+                                <th>{% trans '联系方式' %}</th>
+                                <th>{% trans '学生人数' %}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for teacher in teacher_data %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ teacher.name }}</td>
+                                    <td>{{ teacher.get_gender_display }}</td>
+                                    <td>{{ teacher.age }}{% trans '岁' %}</td>
+                                    <td>{{ teacher.number }}</td>
+                                    <td>
+                                        <span class="badge">{{ teacher.student_count }}</span>
+                                    </td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td colspan="7" class="text-center text-muted">暂无班主任数据</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#        统计图#}
+        <div class="col-lg-6" style="float: right " >
+            <div class="panel panel-default" style="box-shadow: 10px 10px 15px #b2dba1;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                        {% trans '班级人数对比' %}</h3>
+                </div>
+                <div class="panel-body">
+                    {% for teacher in teacher_data %}
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-sm-3 text-right">
+                                <strong>{{ teacher.name }}{% trans '老师' %} </strong>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info"
+                                         role="progressbar"
+                                         style="width: {% widthratio teacher.student_count max_count 100 %}%;">
+                                        {{ teacher.student_count }}人
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

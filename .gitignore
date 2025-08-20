@@ -1,0 +1,22 @@
+# 数据库文件
+*.sqlite3
+*.db
+
+# Python 编译文件和缓存
+__pycache__/
+*.py[cod]
+
+# 环境变量文件（经常包含密码！）
+.env
+.env.local
+
+# Django 的生产环境静态文件目录（我们之后会在服务器上生成）
+staticfiles/
+
+#  IDE 文件
+.vscode/
+.idea/
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db

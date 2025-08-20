@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span>
+                {% trans '学生信息修改' %} <small>{% trans '可以在这里修改学生信息' %}</small></h1>
+        </div>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {% for foo in form %}
+                <div class="col-xs-6">
+                    <span style="color: red">{{ foo.errors.0 }}</span>
+                    {{ foo.label }}: {{ foo }}
+                </div>
+            {% endfor %}
+            <div class="form-group-lg">
+                <div class=" col-sm-10">
+                    <button type="submit" class="btn btn-info " style="margin-top: 10px">{% trans '添 加' %}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -98,11 +98,11 @@ WSGI_APPLICATION = 'Student.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'studentmanager'),
-        'USER': os.environ.get('DB_USER', 'root'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', '123456'),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '3306'),
+        'NAME': 'SakuraCN$Student_content',       # 数据库名
+        'USER': 'SakuraCN',                       # 用户名
+        'PASSWORD': '20030908xxf@',               # 密码
+        'HOST': 'SakuraCN.mysql.pythonanywhere-services.com', # 主机地址
+        'PORT': '3306',                           # 端口，通常是3306
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         }

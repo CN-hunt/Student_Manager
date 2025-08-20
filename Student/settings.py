@@ -159,3 +159,15 @@ LANGUAGES = [
     ('zh-hans', _('简体中文')),  # 列表里的 _() 稍后也会被翻译
     ('ja', _('日本語')),
 ]
+
+
+# 静态文件的URL前缀，浏览器将通过这个URL访问静态文件
+STATIC_URL = '/static/'
+
+# 开发时存放静态文件的目录
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'app01/static'),  # 根据您的项目结构，指向app01下的static目录
+]
+
+# 执行collectstatic命令后，静态文件将被收集到这个目录
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -1,7 +1,7 @@
 # 基于Django的学生信息管理
 一个功能完整的双语（简体中文/日本語）学生管理系统，专注于展示 **Django 国际化 (i18n) 与本地化 (l10n)** 的最佳实践与完整实现流程。
 
-🌐 **在线演示 (Live Demo):**: [(部署中)点击此处访问部署在 PythonAnywhere 上的应用](https://xn--6qqv7i14ofosyrb.pythonanywhere.com/)
+🌐 **在线演示 (Live Demo):**: [(已上线)点击此处访问部署在 PythonAnywhere 上的应用](https://sakuracn.pythonanywhere.com)
 
 ------
 

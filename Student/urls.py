@@ -19,7 +19,13 @@ from django.urls import path,include
 from django.views.i18n import set_language
 from app01 import views
 
+# 避免重定向至Django的管理界面
+from django.views.generic import RedirectView
+
 urlpatterns = [
+    # 避免重定向至Django的管理界面,直接定向主页
+    path('', RedirectView.as_view(url='/index/')),
+    
     path('admin/', admin.site.urls),
     path('index/', views.index),
     path('index/teacheradd/', views.teacher_add),

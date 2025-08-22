@@ -190,11 +190,6 @@ class AdminModelForm(forms.ModelForm):
             'password': forms.PasswordInput(attrs={'class': 'form-text form-control'}),
         }
 
-    def clean_password(self):
-        password = self.cleaned_data['password']
-        if len(password) < 6:
-            raise ValidationError(_('密码过短，请重新输入'))
-        return password
 
 
 def login(request):
